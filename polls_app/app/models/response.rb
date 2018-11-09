@@ -32,5 +32,9 @@ class Response < ApplicationRecord
   def respondant_already_answered?
     sibling_responses.exists?(user_id: respondant.id)
   end
+  
+  def no_rigging
+    self.question
+  end
     
 end
