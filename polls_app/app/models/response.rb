@@ -30,7 +30,7 @@ class Response < ApplicationRecord
   end
   
   def respondant_already_answered?
-    
+    sibling_responses.exists?(user_id: respondant.id)
   end
     
 end
